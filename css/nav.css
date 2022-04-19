@@ -1,0 +1,153 @@
+#mainNav {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0px 0px 8 rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+  position: relative;
+  border-right: 1px solid #E7E7E7;
+}
+
+.suspenso {
+  width: 60px;
+  display: none;
+}
+
+.logo {
+  background-image: url("../images/dewey 4.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.nav--items li {
+  list-style: none;
+  display: flex;
+  line-height: 19px;
+  width: 100%;
+  height: 33px;
+  cursor: pointer;
+  border-bottom: 1px solid #E7E7E7;
+  position: relative;
+}
+
+.nav--items li :before {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0ch;
+  width: 8px;
+  height: 33px;
+  background: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
+}
+
+.nav--items {
+  position: relative;
+}
+
+.nav--items li:hover :before {
+  display: block;
+}
+
+.nav--items li:hover {
+  background-color: #FDF1EB;
+}
+
+.nav--items li p {
+  margin-left: 15px;
+  font-style: normal;
+  font-size: 15px;
+  font-family: 'Quicksand';
+  font-weight: 500;
+  margin-top: 6px;
+  color: #725C5C;
+}
+
+.nav--items-suspenso,
+.nav--items-suspenso1 {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+}
+
+#nav-suspenso li {
+  position: relative;
+}
+
+#nav-suspenso li p {
+  display: block;
+  color: #EE7A3A;
+  padding: 5px;
+  width: 210px;
+  height: 35px;
+}
+
+li ul {
+  position: absolute;
+  left: 45px;
+  top: 0;
+  display: none;
+  flex-direction: column;
+}
+
+@media(max-width:1000px) {
+
+  #mainNav div {
+    display: none;
+  }
+
+  .suspenso {
+    display: flex;
+  }
+
+  #nav-suspenso img {
+    margin-top: 15px;
+    display: flex;
+    width: 60px;
+  }
+
+  #mainNav {
+    box-shadow: none;
+    border: none;
+  }
+
+}
+
+@media(max-width:560px) {
+  #nav-suspenso img {
+    margin-bottom: 520px;
+  }
+
+  #nav-suspenso {
+    display: flex;
+  }
+
+  body {
+    grid-template-columns: 0 1fr;
+    gap: 0;
+  }
+
+  .suspenso {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  #h1--article1 {
+    margin-top: 50px;
+  }
+
+  #nav-suspenso img {
+    width: 40px;
+  }
+
+  li ul {
+    position: absolute;
+    left: 45px;
+    top: 0;
+    display: none;
+    flex-direction: column;
+  }
+}
